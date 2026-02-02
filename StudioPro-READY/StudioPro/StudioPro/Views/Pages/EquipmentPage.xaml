@@ -1,0 +1,25 @@
+<Page x:Class="RomanticStudio.Views.Pages.EquipmentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      FlowDirection="RightToLeft">
+    <Grid Padding="25">
+        <StackPanel Spacing="20">
+            <TextBlock Text="🎬 مدیریت تجهیزات (آفیش)" Style="{StaticResource TitleTextBlock}"/>
+            
+            <Border Style="{StaticResource CardBorder}">
+                <StackPanel Spacing="15">
+                    <TextBlock Text="این صفحه شامل:" FontSize="16" FontWeight="SemiBold"/>
+                    <TextBlock Text="✅ رزرو تجهیزات" FontSize="14"/>
+                    <TextBlock Text="✅ مدیریت تامین‌کنندگان" FontSize="14"/>
+                    <TextBlock Text="✅ تخصیص به پرسنل" FontSize="14"/>
+                    <TextBlock Text="✅ محاسبه هزینه‌های اجاره" FontSize="14"/>
+                    <TextBlock Text="✅ پیگیری وضعیت تجهیزات" FontSize="14"/>
+                    
+                    <TextBlock Text="📌 نکته: این بخش به طور کامل در فایل‌های سرویس پیاده‌سازی شده است." 
+                              TextWrapping="Wrap" Margin="0,10,0,0"
+                              Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

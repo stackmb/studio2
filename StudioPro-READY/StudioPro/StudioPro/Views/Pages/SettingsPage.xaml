@@ -1,0 +1,68 @@
+<Page x:Class="RomanticStudio.Views.Pages.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      FlowDirection="RightToLeft">
+    <ScrollViewer>
+        <Grid Padding="25">
+            <StackPanel Spacing="20">
+                <TextBlock Text="⚙️ تنظیمات" Style="{StaticResource TitleTextBlock}"/>
+                
+                <Border Style="{StaticResource CardBorder}">
+                    <StackPanel Spacing="15">
+                        <TextBlock Text="تنظیمات کلی" FontSize="18" FontWeight="SemiBold"/>
+                        
+                        <TextBox x:Name="StudioNameBox" PlaceholderText="نام استودیو" Header="نام استودیو"/>
+                        <TextBox x:Name="PhoneBox" PlaceholderText="شماره تماس" Header="شماره تماس"/>
+                        <TextBox x:Name="AddressBox" PlaceholderText="آدرس" Header="آدرس" AcceptsReturn="True" Height="60"/>
+                        
+                        <Button Content="💾 ذخیره تنظیمات" Click="SaveSettingsButton_Click" 
+                               Style="{StaticResource AccentButtonStyle}"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource CardBorder}">
+                    <StackPanel Spacing="15">
+                        <TextBlock Text="🤖 تلگرام بات" FontSize="18" FontWeight="SemiBold"/>
+                        
+                        <TextBox x:Name="TelegramTokenBox" PlaceholderText="Bot Token" Header="توکن بات"/>
+                        <TextBox x:Name="TelegramChatIdBox" PlaceholderText="Chat ID" Header="شناسه چت"/>
+                        
+                        <CheckBox x:Name="AutoSendCheckBox" Content="ارسال خودکار گزارش‌ها" IsChecked="True"/>
+                        
+                        <Button Content="🧪 تست اتصال" Click="TestTelegramButton_Click"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource CardBorder}">
+                    <StackPanel Spacing="15">
+                        <TextBlock Text="💾 بک‌آپ و ریستور" FontSize="18" FontWeight="SemiBold"/>
+                        
+                        <Grid ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Button Grid.Column="0" Content="📥 تهیه بک‌آپ" Click="CreateBackupButton_Click" HorizontalAlignment="Stretch"/>
+                            <Button Grid.Column="1" Content="📤 بازیابی" Click="RestoreBackupButton_Click" HorizontalAlignment="Stretch"/>
+                        </Grid>
+                        
+                        <Button Content="📨 ارسال بک‌آپ به تلگرام" Click="SendBackupToTelegramButton_Click"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource CardBorder}">
+                    <StackPanel Spacing="15">
+                        <TextBlock Text="🎫 پشتیبانی" FontSize="18" FontWeight="SemiBold"/>
+                        
+                        <TextBox x:Name="TicketMessageBox" PlaceholderText="پیام شما..." 
+                                Height="100" AcceptsReturn="True"/>
+                        
+                        <Button Content="📧 ارسال تیکت" Click="SendTicketButton_Click" 
+                               Style="{StaticResource AccentButtonStyle}"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

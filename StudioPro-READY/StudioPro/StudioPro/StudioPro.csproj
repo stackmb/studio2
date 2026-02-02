@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>StudioPro</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x64</Platforms>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <Nullable>enable</Nullable>
+    <WindowsPackageType>None</WindowsPackageType>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <ApplicationIcon>Assets\AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- WinUI 3 -->
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240227000" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.3233" />
+    
+    <!-- Database -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    
+    <!-- Dependency Injection -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    
+    <!-- Telegram Bot -->
+    <PackageReference Include="Telegram.Bot" Version="19.0.0" />
+    
+    <!-- PDF Generation -->
+    <PackageReference Include="QuestPDF" Version="2024.3.0" />
+    
+    <!-- Persian Date -->
+    <PackageReference Include="MD.PersianDateTime" Version="2.5.2" />
+    
+    <!-- Email -->
+    <PackageReference Include="MailKit" Version="4.3.0" />
+    
+    <!-- Hardware ID -->
+    <PackageReference Include="System.Management" Version="8.0.0" />
+    
+    <!-- QR Code -->
+    <PackageReference Include="QRCoder" Version="1.4.3" />
+    
+    <!-- MVVM Toolkit -->
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    
+    <!-- Charts (برای نمودارها) -->
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WinUI" Version="2.0.0-rc2" />
+    
+    <!-- Excel Export -->
+    <PackageReference Include="ClosedXML" Version="0.102.1" />
+    
+    <!-- JSON -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    
+    <!-- MVVM Toolkit -->
+    <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+</Project>

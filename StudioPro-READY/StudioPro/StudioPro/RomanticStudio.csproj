@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>RomanticStudio</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x64</Platforms>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <PublishProfile>win-x64.pubxml</PublishProfile>
+    <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>Assets\AppIcon.ico</ApplicationIcon>
+    <WindowsPackageType>None</WindowsPackageType>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- WinUI 3 -->
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240311000" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
+    
+    <!-- Database -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    
+    <!-- MVVM & UI -->
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="CommunityToolkit.WinUI.UI.Controls" Version="7.1.2" />
+    
+    <!-- Telegram Bot -->
+    <PackageReference Include="Telegram.Bot" Version="19.0.0" />
+    
+    <!-- PDF Generation -->
+    <PackageReference Include="QuestPDF" Version="2025.12.3" />
+    
+    <!-- Persian Calendar -->
+    <PackageReference Include="PersianDate" Version="3.5.5" />
+    
+    <!-- JSON & Serialization -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    
+    <!-- Email -->
+    <PackageReference Include="MailKit" Version="4.3.0" />
+    
+    <!-- Hardware ID -->
+    <PackageReference Include="System.Management" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\**" />
+    <Content Include="Assets\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+</Project>

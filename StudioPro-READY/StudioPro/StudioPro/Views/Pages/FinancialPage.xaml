@@ -1,0 +1,27 @@
+<Page x:Class="RomanticStudio.Views.Pages.FinancialPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      FlowDirection="RightToLeft">
+    <ScrollViewer>
+        <Grid Padding="25">
+            <StackPanel Spacing="20">
+                <TextBlock Text="💰 گزارش مالی" Style="{StaticResource TitleTextBlock}"/>
+                
+                <Border Style="{StaticResource CardBorder}">
+                    <StackPanel Spacing="15">
+                        <TextBlock Text="این صفحه شامل:" FontSize="16" FontWeight="SemiBold"/>
+                        <TextBlock Text="✅ نمودارهای درآمد و هزینه" FontSize="14"/>
+                        <TextBlock Text="✅ گزارش‌های روزانه/ماهانه/سالانه" FontSize="14"/>
+                        <TextBlock Text="✅ آمار بدهی‌ها" FontSize="14"/>
+                        <TextBlock Text="✅ صادرات Excel/PDF" FontSize="14"/>
+                        <TextBlock Text="✅ نمودار پیشرفت" FontSize="14"/>
+                        
+                        <TextBlock Text="📌 نکته: تمام محاسبات مالی در ContractService و FinancialStats پیاده‌سازی شده است." 
+                                  TextWrapping="Wrap" Margin="0,10,0,0"
+                                  Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

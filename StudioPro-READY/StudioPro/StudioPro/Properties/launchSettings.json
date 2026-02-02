@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "RomanticStudio (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "RomanticStudio (Unpackaged)": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}
